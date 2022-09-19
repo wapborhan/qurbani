@@ -22,12 +22,12 @@ const NavBar = (props) => {
         >
           {props.isActive ? <FaBars /> : <FaAlignLeft />}
           <div className={props.isActive ? "dashboard" : "dashboard-show"}>
-            SR Gradient
+            কুরবানি
           </div>
         </div>
 
         <h2 id="nameTitle" className="text-center text-dark">
-          <span className="heabar"> CSS Gradient</span>{" "}
+          <span className="heabar">কুরবানী সম্পর্কে</span>{" "}
         </h2>
         <div className="account ">
           <ul className="d-flex list-unstyled justify-content-around">

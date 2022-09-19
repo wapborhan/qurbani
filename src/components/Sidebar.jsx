@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { NavLink } from "react-router-dom";
-import { ImCoinDollar, ImCog } from "react-icons/im";
+import { FaInfoCircle } from "react-icons/fa";
+import { GiCow } from "react-icons/gi";
 import sidenav from "./sidenav";
 
 const Sidebar = (props) => {
@@ -14,8 +15,8 @@ const Sidebar = (props) => {
         }
       >
         <div className="logo-details">
-          {/* <HiOutlineColorSwatch /> */}
-          <span className="logo_name">SR Gradient</span>
+          <GiCow />
+          <span className="logo_name">কুরবানি</span>
         </div>
         <ul className="nav-links">
           {sidenav.map((data, idx) => (
@@ -31,7 +32,7 @@ const Sidebar = (props) => {
           <li className="log_out">
             <NavLink to="/about">
               <i className="fas fa-exclamation-triangle text-white">
-                {/* <HiInformationCircle /> */}
+                <FaInfoCircle />
               </i>
               <span className="links_name">About</span>
             </NavLink>

@@ -1,34 +1,29 @@
-import {
-  ImCoinDollar,
-  ImStatsBars,
-  ImEnter,
-  ImExit,
-  ImCog,
-} from "react-icons/im";
+import { FaHome, FaRegQuestionCircle, FaHistory } from "react-icons/fa";
+import { GiGoat } from "react-icons/gi";
 
 const sidenav = [
   {
     id: 1,
     title: "মূল পাতা",
-    icon: "",
+    icon: <FaHome />,
     path: "/home",
   },
   {
     id: 2,
     title: "মাসায়েল",
-    icon: "",
+    icon: <FaRegQuestionCircle />,
     path: "/question",
   },
   {
     id: 3,
     title: "কুরবানির ইতিহাস",
-    icon: "",
+    icon: <FaHistory />,
     path: "/history",
   },
   {
     id: 4,
     title: "যিলহজের আমল",
-    icon: "",
+    icon: <GiGoat />,
     path: "/amol",
   },
 ];
