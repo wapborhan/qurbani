@@ -14,8 +14,8 @@ const index = (props) => {
       <div className="row">
         {props.data.map((item) => {
           return (
-            <div className="col-md-12 mb-4" key={item.id}>
-              <div className="card">
+            <div className="col-md-12 mb-5" key={item.id}>
+              <div className="card shadow">
                 <div className="card-body">প্রশ্নঃ {item.ques}</div>
                 <div className="card-footer">প্রশ্ন করেছেনঃ {item.ask}</div>
               </div>
