@@ -1,8 +1,8 @@
 import React, { Fragment, Component } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 
-import { QUESTION } from "./assets/data/data";
-import sidenav from "./components/sidenav";
+import QUESTION from "./assets/data/index";
+
 // Page Import
 import { Home, Amol, History, Question } from "./pages";
 import NotFound from "./components/NotFound";
