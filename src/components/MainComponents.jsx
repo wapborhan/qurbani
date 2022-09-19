@@ -2,7 +2,10 @@ import React, { Fragment, Component } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 
 import DATA from "../assets/data/data";
-// import NotFound from "./pages/notfound/NotFound";
+import sidenav from "./sidenav";
+// Page Import
+import { Home, Amol, History, Question } from "../pages";
+import NotFound from "./NotFound";
 
 export default class MainComponents extends Component {
   constructor(props) {
@@ -16,29 +19,15 @@ export default class MainComponents extends Component {
     return (
       <Fragment>
         <div className="container-fluid topbarpt">
-          {/* <Routes baseline="/income-expense-react">
-            <Route
-              path="/income-expense-react"
-              exact
-              element={<Dashboard alldata={this.state.data} />}
-            />
-            <Route
-              path="/"
-              element={<Navigate replace to="/income-expense-react" />}
-            />
-            <Route
-              path="/income"
-              exact
-              element={<Income data={this.state.data.incomeDetails} />}
-            />
-            <Route
-              path="/expense"
-              exact
-              element={<Expense data={this.state.data.expenseDetails} />}
-            />
-           
-            <Route path="*" exact element={<NotFound />} />
-          </Routes> */}
+          <Routes>
+            <Route path="/" element={<Navigate replace to="/home" />} />
+            <Route path="/home" exact element={<Home />} />
+            <Route path="/question" exact element={<Question />} />
+            <Route path="/history" element={<History />} exact />
+            <Route path="/amol" element={<Amol />} exact />
+
+            <Route path="*" element={<NotFound />} />
+          </Routes>
         </div>
       </Fragment>
     );

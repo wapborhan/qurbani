@@ -6,31 +6,31 @@ import {
   ImCog,
 } from "react-icons/im";
 
-const SIDENAV = [
+const sidenav = [
   {
     id: 1,
     title: "মূল পাতা",
     icon: "",
-    path: "/",
+    path: "/home",
   },
   {
     id: 2,
     title: "মাসায়েল",
     icon: "",
-    path: "/",
+    path: "/question",
   },
   {
     id: 3,
     title: "কুরবানির ইতিহাস",
     icon: "",
-    path: "/",
+    path: "/history",
   },
   {
     id: 4,
     title: "যিলহজের আমল",
     icon: "",
-    path: "/",
+    path: "/amol",
   },
 ];
 
-export default SIDENAV;
+export default sidenav;

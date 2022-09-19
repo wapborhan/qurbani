@@ -1,57 +1,43 @@
 import React, { Fragment } from "react";
 import { NavLink } from "react-router-dom";
-import {
-  ImCoinDollar,
-  ImStatsBars,
-  ImEnter,
-  ImExit,
-  ImCog,
-} from "react-icons/im";
-import SIDENAV from "./sidenav";
+import { ImCoinDollar, ImCog } from "react-icons/im";
+import sidenav from "./sidenav";
 
-const Sidebar = () => {
+const Sidebar = (props) => {
   return (
     <Fragment>
-      <div className="logo-details">
-        <ImCoinDollar />
-        <span className="logo_name">SR BUDGET</span>
+      <div
+        className={
+          props.isActive
+            ? "sidebars text-light bg-dark  "
+            : "sidebars text-light bg-dark active"
+        }
+      >
+        <div className="logo-details">
+          {/* <HiOutlineColorSwatch /> */}
+          <span className="logo_name">SR Gradient</span>
+        </div>
+        <ul className="nav-links">
+          {sidenav.map((data, idx) => (
+            <li key={idx}>
+              <NavLink to={data.path}>
+                <i className="fas fa-exclamation-triangle text-white">
+                  {data.icon}
+                </i>
+                <span className="links_name">{data.title} </span>
+              </NavLink>
+            </li>
+          ))}
+          <li className="log_out">
+            <NavLink to="/about">
+              <i className="fas fa-exclamation-triangle text-white">
+                {/* <HiInformationCircle /> */}
+              </i>
+              <span className="links_name">About</span>
+            </NavLink>
+          </li>
+        </ul>
       </div>
-      <ul className="nav-links">
-        {SIDENAV.map((item) => {})}
-        <li>
-          <NavLink to="/income-expense-react">
-            <i className="fas fa-exclamation-triangle text-white">
-              <ImStatsBars />
-            </i>
-            <span className="links_name">মূল পাতা</span>
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/income">
-            <i className="fas fa-exclamation-triangle text-white">
-              <ImEnter />
-            </i>
-            <span className="links_name">Income</span>
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/expense">
-            <i className="fas fa-exclamation-triangle text-white">
-              <ImExit />
-            </i>
-            <span className="links_name">Expense</span>
-          </NavLink>
-        </li>
-
-        <li className="log_out">
-          <NavLink to="/setting">
-            <i className="fas fa-exclamation-triangle text-white">
-              <ImCog />
-            </i>
-            <span className="links_name">About</span>
-          </NavLink>
-        </li>
-      </ul>
     </Fragment>
   );
 };
