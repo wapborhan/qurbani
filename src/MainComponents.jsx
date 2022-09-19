@@ -1,17 +1,17 @@
 import React, { Fragment, Component } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 
-import DATA from "../assets/data/data";
-import sidenav from "./sidenav";
+import { QUESTION } from "./assets/data/data";
+import sidenav from "./components/sidenav";
 // Page Import
-import { Home, Amol, History, Question } from "../pages";
-import NotFound from "./NotFound";
+import { Home, Amol, History, Question } from "./pages";
+import NotFound from "./components/NotFound";
 
 export default class MainComponents extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: DATA,
+      question: QUESTION,
     };
   }
 
@@ -22,7 +22,11 @@ export default class MainComponents extends Component {
           <Routes>
             <Route path="/" element={<Navigate replace to="/home" />} />
             <Route path="/home" exact element={<Home />} />
-            <Route path="/question" exact element={<Question />} />
+            <Route
+              path="/question"
+              exact
+              element={<Question data={this.state.question} />}
+            />
             <Route path="/history" element={<History />} exact />
             <Route path="/amol" element={<Amol />} exact />
 

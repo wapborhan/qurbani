@@ -14,7 +14,7 @@ const NavBar = (props) => {
     <Fragment>
       <nav
         id="topbar"
-        className="topbar navbar navbar-expand navbar-light mb-4 static-top shadow d-flex justify-content-between px-4"
+        className="topbar navbar navbar-expand navbar-light bg-white  mb-4 static-top shadow d-flex justify-content-between px-4"
       >
         <div
           className="sidebars-button text-dark mr-auto"

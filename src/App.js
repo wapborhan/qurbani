@@ -2,7 +2,7 @@ import React, { useState, Component } from "react";
 import { FaBars, FaUserCircle, FaAlignLeft } from "react-icons/fa";
 import { BrowserRouter } from "react-router-dom";
 // Components Import
-import MainComponents from "./components/MainComponents";
+import MainComponents from "./MainComponents";
 import NavBar from "./components/NavBar";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
