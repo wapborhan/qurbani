@@ -16,8 +16,14 @@ const index = (props) => {
           return (
             <div className="col-md-12 mb-5" key={item.id}>
               <div className="card shadow">
-                <div className="card-body">প্রশ্নঃ {item.ques}</div>
-                <div className="card-footer">প্রশ্ন করেছেনঃ {item.ask}</div>
+                <div className="card-body">
+                  <strong>প্রশ্নঃ </strong>
+                  {item.ques}
+                </div>
+                <div className="card-footer">
+                  <strong>প্রশ্ন করেছেনঃ </strong>
+                  {item.ask}
+                </div>
               </div>
             </div>
           );
