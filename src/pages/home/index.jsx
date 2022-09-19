@@ -1,8 +1,16 @@
-import React from "react";
+import React, { Fragment, Component } from "react";
 import Qurbani from "../qurbani";
+import Form from "./Form";
 
-const index = () => {
-  return <Qurbani />;
-};
+class index extends Component {
+  render() {
+    return (
+      <Fragment>
+        <Form />
+        <Qurbani />
+      </Fragment>
+    );
+  }
+}
 
 export default index;
