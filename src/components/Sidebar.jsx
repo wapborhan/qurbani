@@ -7,6 +7,7 @@ import {
   ImExit,
   ImCog,
 } from "react-icons/im";
+import SIDENAV from "./sidenav";
 
 const Sidebar = () => {
   return (
@@ -16,12 +17,13 @@ const Sidebar = () => {
         <span className="logo_name">SR BUDGET</span>
       </div>
       <ul className="nav-links">
+        {SIDENAV.map((item) => {})}
         <li>
           <NavLink to="/income-expense-react">
             <i className="fas fa-exclamation-triangle text-white">
               <ImStatsBars />
             </i>
-            <span className="links_name">Dashboard</span>
+            <span className="links_name">মূল পাতা</span>
           </NavLink>
         </li>
         <li>
