@@ -1,7 +1,8 @@
 import React from "react";
+import Qurbani from "../qurbani";
 
 const index = () => {
-  return <div>index</div>;
+  return <Qurbani />;
 };
 
 export default index;
