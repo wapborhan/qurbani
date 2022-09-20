@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { ModalHeader, Modal, ModalBody, ModalFooter, Button } from "reactstrap";
+import { NavLink } from "react-router-dom";
 
 export default class Form extends Component {
   constructor(props) {
@@ -66,35 +67,6 @@ export default class Form extends Component {
     });
   };
   render() {
-    // const [check, setCheck] = useState({
-    //   name: "",
-    //   amount: "",
-    //   message: "",
-    //   sayHi: "",
-    // });
-
-    // const handleBlur = (e) => {
-    //   const newCheck = { ...check };
-    //   newCheck[e.target.name] = e.target.value;
-    //   setCheck(newCheck);
-    // };
-
-    // let handleSubmit = (e) => {
-    //   if (check.name && check.amount) {
-    //     const newCheck = { ...check };
-    //     newCheck["amount"] = check.amount;
-    //     newCheck["sayHi"] = "প্রিয়..";
-    //     if (check.amount >= 64260)
-    //       newCheck["message"] =
-    //         "আপনার উপর কুরবানি ওয়াজিব হয়েছে, কুরবানির প্রস্তুতি নেয়ার আহবান রইল।";
-    //     else
-    //       newCheck["message"] =
-    //         "আপনার উপর কুরবানি ওয়াজিব হয়নি, আল্লাহ তায়ালা আপনাকে কুরবানি দেয়ার তাওফিক দান করুন।";
-
-    //     setCheck(newCheck);
-    //   }
-    //   e.preventDefault();
-    // };
     return (
       <div className="border shadow rounded mb-3">
         <div className="form m-3">
@@ -128,8 +100,8 @@ export default class Form extends Component {
                   required
                 />
               </div>
-              <div className="col-md-3">
-                <div className="d-block">
+              <div className="col-md-3 d-flex align-items-end">
+                <div className="d-block w-100 mb-2">
                   <button
                     className="btn btn-success "
                     id="income-btn"
@@ -151,7 +123,14 @@ export default class Form extends Component {
               প্রিয় <strong>{this.state.name}</strong>
             </span>
           </ModalHeader>
-          <ModalBody>{this.state.message}</ModalBody>
+          <ModalBody>
+            <h2> {this.state.message}</h2>
+          </ModalBody>
+          <ModalFooter className="text-center justify-content-center">
+            বিস্তারিত জানতে{" "}
+            <NavLink to="/qurbani-details">এখানে ক্লিক </NavLink>
+            করুন
+          </ModalFooter>
         </Modal>
       </div>
     );
