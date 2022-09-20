@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { ModalHeader, Modal, ModalBody, ModalFooter, Button } from "reactstrap";
 
 export default class Form extends Component {
   constructor(props) {
@@ -6,17 +7,19 @@ export default class Form extends Component {
     this.state = {
       name: "",
       amount: "",
+      message: "",
       isSubmitDisabled: true,
+      modalOpen: false,
     };
 
     this.handleChange = this.handleChange.bind(this);
   }
 
-  // triggered everytime value changes in our textboxes
+  //triggered everytime value changes in our textboxes
   handleChange(event) {
     this.setState(
       {
-        // use dynamic name value to set our state object property
+        //  use dynamic name value to set our state object property
         [event.target.name]: event.target.value,
       },
       function () {
@@ -40,14 +43,27 @@ export default class Form extends Component {
   }
   // triggered on submit
   handleSubmit = (event) => {
-    // get our const values by destructuring state
     event.preventDefault();
-    const { name, amount } = this.state;
-    // regular javascript alert function
-    alert(`Your type detail: \n 
-           Desc: ${name} \n 
-           Amount: ${amount} \n
-           `);
+    if (this.state.amount >= 64260) {
+      this.setState({
+        message: `আপনার উপর কুরবানি ওয়াজিব হয়েছে, 
+        \n\n কুরবানির প্রস্তুতি নেয়ার আহবান রইল।`,
+      });
+    } else {
+      this.setState({
+        message: `আপনার উপর কুরবানি ওয়াজিব হয়নি,\n\n আল্লাহ তায়ালা আপনাকে কুরবানি দেয়ার তাওফিক দান করুন।"`,
+      });
+    }
+
+    this.setState({
+      modalOpen: !this.state.modalOpen,
+    });
+  };
+
+  toggleModal = () => {
+    this.setState({
+      modalOpen: !this.state.modalOpen,
+    });
   };
   render() {
     // const [check, setCheck] = useState({
@@ -128,6 +144,15 @@ export default class Form extends Component {
             </div>
           </form>
         </div>
+        <Modal size="lg" isOpen={this.state.modalOpen}>
+          <ModalHeader toggle={this.toggleModal} charCode="close">
+            <span>
+              {" "}
+              প্রিয় <strong>{this.state.name}</strong>
+            </span>
+          </ModalHeader>
+          <ModalBody>{this.state.message}</ModalBody>
+        </Modal>
       </div>
     );
   }
