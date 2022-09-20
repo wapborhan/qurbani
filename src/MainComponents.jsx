@@ -3,7 +3,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 //Data
 import QUESTION from "./assets/data/index";
 // Page Import
-import { Home, Amol, History, Question } from "./pages";
+import { Home, Amol, History, Question, Developer } from "./pages";
 import NotFound from "./components/NotFound";
 
 export default class MainComponents extends Component {
@@ -28,6 +28,7 @@ export default class MainComponents extends Component {
             />
             <Route path="/history" element={<History />} exact />
             <Route path="/amol" element={<Amol />} exact />
+            <Route path="/about" element={<Developer />} exact />
 
             <Route path="*" element={<NotFound />} />
           </Routes>
