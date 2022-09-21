@@ -8,7 +8,6 @@ import {
   FaGithubSquare,
   FaCodepen,
 } from "react-icons/fa";
-import Date from "./Date";
 
 const NavBar = (props) => {
   return (
@@ -30,7 +29,22 @@ const NavBar = (props) => {
         <h2 id="nameTitle" className="text-center text-dark">
           <span className="heabar">কুরবানী সম্পর্কে</span>{" "}
         </h2>
-        <Date />
+        <div className="dateshow">
+          {new Intl.DateTimeFormat("bn-BD-u-ca-islamic", {
+            day: "numeric",
+            month: "long",
+            weekday: "long",
+            year: "numeric",
+          }).format(Date.now())}
+        </div>
+        <div className="datehide">
+          {new Intl.DateTimeFormat("bn-BD-u-ca-islamic", {
+            day: "numeric",
+            month: "long",
+            weekday: "long",
+            // year: "numeric",
+          }).format(Date.now())}
+        </div>
       </nav>
     </Fragment>
   );
