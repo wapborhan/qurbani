@@ -29,24 +29,21 @@ const NavBar = (props) => {
         <h2 id="nameTitle" className="text-center text-dark">
           <span className="heabar">কুরবানী সম্পর্কে</span>{" "}
         </h2>
-        <div className="account ">
-          <ul className="d-flex list-unstyled justify-content-around">
-            <li>
-              <FaFacebookSquare />
-            </li>
-            <li>
-              <FaTwitterSquare />
-            </li>
-            <li>
-              <FaLinkedin />
-            </li>
-            <li>
-              <FaGithubSquare />
-            </li>
-            <li>
-              <FaCodepen />
-            </li>
-          </ul>
+        <div className="dateshow">
+          {new Intl.DateTimeFormat("bn-BD-u-ca-islamic", {
+            day: "numeric",
+            month: "long",
+            weekday: "long",
+            year: "numeric",
+          }).format(Date.now())}
+        </div>
+        <div className="datehide">
+          {new Intl.DateTimeFormat("bn-BD-u-ca-islamic", {
+            day: "numeric",
+            month: "long",
+            weekday: "long",
+            // year: "numeric",
+          }).format(Date.now())}
         </div>
       </nav>
     </Fragment>

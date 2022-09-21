@@ -9,3 +9,16 @@
 a {
   text-decoration: none;
 }
+
+.datehide {
+  display: none;
+}
+
+@media (max-width: 1240px) {
+  .datehide {
+    display: block;
+  }
+  .dateshow {
+    display: none;
+  }
+}

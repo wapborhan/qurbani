@@ -3,7 +3,6 @@ import React, { Fragment } from "react";
 import QuestList from "./QuestList";
 
 const index = (props) => {
-  console.log(props);
   return (
     <Fragment>
       <div className="container">
