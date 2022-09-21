@@ -1,25 +1,11 @@
-import React, { Component } from "react";
+import React, { Fragment } from "react";
+
 import QuestList from "./QuestList";
 
-export default class index extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      question: props.data,
-      selectedQues: null,
-    };
-  }
-
-  selectedQuesHandler = (ques) => {
-    const question = this.state.question.filter((item) => item.id === ques)[0];
-    this.setState({
-      selectedQues: question,
-    });
-  };
-
-  render() {
-    console.log(this.state.selectedQues);
-    return (
+const index = (props) => {
+  console.log(props);
+  return (
+    <Fragment>
       <div className="container">
         <div className="row">
           <div className="col-md-12 text-center mb-3">
@@ -30,21 +16,22 @@ export default class index extends Component {
           </div>
         </div>
         <div className="row">
-          {this.state.question.map((item) => {
+          {props.data.map((item) => {
             // console.log(item);
             return (
               <QuestList
                 key={item.id}
                 item={item}
-                selectedQues={this.state.selectedQues}
                 selectedQuesHandler={() => {
-                  this.selectedQuesHandler(item.id);
+                  props.selectedQuesHandler(item.id);
                 }}
               />
             );
           })}
         </div>
       </div>
-    );
-  }
-}
+    </Fragment>
+  );
+};
+
+export default index;

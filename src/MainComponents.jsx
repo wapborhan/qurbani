@@ -10,6 +10,7 @@ import {
   Question,
   Developer,
   QurbaniDetails,
+  Answer,
 } from "./pages";
 import NotFound from "./components/NotFound";
 
@@ -18,9 +19,15 @@ export default class MainComponents extends Component {
     super(props);
     this.state = {
       question: QUESTION,
+      selectedQues: null,
     };
   }
-
+  selectedQuesHandler = (ques) => {
+    const question = this.state.question.filter((item) => item.id === ques)[0];
+    this.setState({
+      selectedQues: question,
+    });
+  };
   render() {
     return (
       <Fragment>
@@ -31,13 +38,22 @@ export default class MainComponents extends Component {
             <Route
               path="/question"
               exact
-              element={<Question data={this.state.question} />}
+              element={
+                <Question
+                  data={this.state.question}
+                  selectedQuesHandler={this.selectedQuesHandler}
+                />
+              }
+            />{" "}
+            <Route
+              path="/question/:id"
+              exact
+              element={<Answer data={this.state.selectedQues} />}
             />
             <Route path="/history" element={<History />} exact />
             <Route path="/amol" element={<Amol />} exact />
             <Route path="/qurbani-details" element={<QurbaniDetails />} exact />
             <Route path="/about" element={<Developer />} exact />
-
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
