@@ -5,5 +5,6 @@ import Question from "./question";
 import Developer from "./about";
 import QurbaniDetails from "./qurbani/QurbaniDetails";
 import Answer from "./question/QuestionDetails";
+import Qurbani from "./qurbani";
 
-export { Home, Amol, History, Question, Developer, QurbaniDetails, Answer };
+export { Home, Amol, History, Question, Developer, QurbaniDetails, Answer, Qurbani };

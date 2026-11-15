@@ -1,43 +1,90 @@
-# Getting Started with Create React App
+# কুরবানী সহায়িকা (Qurbani Guide & Nisab Calculator)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+সহীহ সুন্নাহ মোতাবেক কুরবানীর প্রস্তুতি, হালনাগাদ নেসাব ক্যালকুলেটর, নির্ভরযোগ্য ফাতাওয়া ও মাসায়েল পোর্টাল।
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 ব্যবহৃত টেকনোলজি স্ট্যাক (Tech Stack)
 
-### `npm start`
+- **Vite 6** (বজ্রগতির আধুনিক বিল্ড টুল)
+- **React 19** (লেটেস্ট রিয়্যাক্ট ভার্সন)
+- **Tailwind CSS** (আধুনিক রেসপনসিভ ডিজাইন ও ডার্ক মোড সাপোর্ট)
+- **React Router 7** (ক্লিন ও স্মুথ ক্লায়েন্ট-সাইড রাউটিং)
+- **Lucide Icons** (মডার্ন ও ক্লিন ভেক্টর আইকন)
+- **Canvas Confetti** (নেসাব হিসাবের ইন্টারেক্টিভ অ্যানিমেশন)
+- **Google Fonts** (Hind Siliguri বাংলা ফন্ট ও Amiri আরবি ক্যালিগ্রাফি)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ✨ প্রধান বৈশিষ্ঠ্যসমূহ (Key Features)
 
-### `npm test`
+1. **ইন্টারেক্টিভ নেসাব ক্যালকুলেটর (Nisab Calculator)**
+   - দ্রুত হিসাব (Quick check) এবং বিস্তারিত অ্যাসেট ব্রেকডাউন (নগদ টাকা, ব্যাংক ব্যালেন্স, সোনা-রুপা, অতিরিক্ত সম্পদ মাইনাস ঋণ)।
+   - কাস্টমাইজযোগ্য রুপার বাজারদর সেটিং (ডিফল্ট: ৫২.৫ ভরি রুপা)।
+   - কুরবানী ওয়াজিব হওয়ার সাথে সাথে ভিজ্যুয়াল কনফেটি অ্যানিমেশন ও সুস্পষ্ট শরয়ী দিকনির্দেশনা।
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **মাসায়েল ও ফাতাওয়া পোর্টাল (Masayel & Q&A)**
+   - মাসিক আল-কাওসার থেকে সংগৃহীত ৩০+ প্রামাণ্য ফাতাওয়া।
+   - রিয়েল-টাইম ইনস্ট্যান্ট সার্চ (প্রশ্ন, উত্তর, রেফারেন্স বা প্রশ্নকারীর নাম অনুযায়ী)।
+   - ক্যাটাগরি ফিল্টারিং ও পৃষ্ঠা রিফ্রেশে সরাসরি মাসআলা দেখার নির্ভরযোগ্য রাউটিং (`/question/:id`)।
+   - এক ক্লিকে উত্তর কপি এবং শেয়ার করার সুবিধা।
 
-### `npm run build`
+3. **কুরবানীর পূর্ণাঙ্গ নিয়মাবলী ও গাইড (Qurbani Rules)**
+   - পশুর বয়সসীমা (ছাগল/ভেড়া ১ বছর, গরু/মহিষ ২ বছর, উট ৫ বছর)।
+   - গ্রহণযোগ্য ও অগ্রহণযোগ্য শারীরিক ত্রুটির স্পষ্ট তালিকা।
+   - শরিক বা অংশীদারিত্বের নীতিমালা ও গোশত বণ্টনের ১/৩ নিয়ম।
+   - যবাইয়ের সুন্নাত আদব ও সহীহ তাকবীর।
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. **কুরবানীর ঐতিহাসিক প্রেক্ষাপট (History of Qurbani)**
+   - আদম (আ.)-এর দুই পুত্র হাবীল ও কাবিলের কুরবানী।
+   - হযরত ইবরাহীম (আ.) ও হযরত ইসমাঈল (আ.)-এর ঐতিহাসিক পরীক্ষা ও মিল্লাতে ইব্রাহিমীর ভিত্তি।
+   - তাফসীর ইবনে কাসীর ও ফতহুল ক্বাদীর ভিত্তিক প্রামাণ্য বিশ্লেষণ।
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+5. **যিলহজের আমল ও তাকবীরে তাশরীক (Dhul Hijjah Deeds)**
+   - ৯ই যিলহজ ফজর হতে ১৩ই যিলহজ আসর পর্যন্ত ২৩ ওয়াক্তের তাকবীরে তাশরীক ডিজিটাল তাসবীহ কাউন্টার।
+   - আরাফার দিনের রোজার ফযীলত।
+   - চাঁদ দেখা থেকে কুরবানী পর্যন্ত নখ-চুল না কাটার সুন্নাত।
+   - ঈদের দিনের গুরুত্বপূর্ণ সুন্নাতসমূহ।
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+6. **আধুনিক ইউজার ইন্টারফেস (Modern UI & UX)**
+   - ইসলামিক এমেরাল্ড গ্রিন ও গোল্ডেন অ্যাকসেন্ট থিম।
+   - ডার্ক ও লাইট মোড টগল (লোকাল স্টোরেজে সংরক্ষিত)।
+   - মোবাইল রেসপনসিভ স্লাইড-আউট সাইডবার।
+   - লাইভ হিজরি ও গ্রেগরিয়ান ক্যালেন্ডার তারিখ প্রদর্শক।
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠️ রান করার নিয়মাবলী (Getting Started)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
- Deployment
+### ১. ডিপেন্ডেন্সি ইনস্টল
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+yarn install
+```
 
-### `npm run build` fails to minify
+### ২. ডেভেলপমেন্ট সার্ভার চালু
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+yarn dev
+```
+
+ব্রাউজারে ওপেন করুন: `http://localhost:5173`
+
+### ৩. প্রোডাকশন বিল্ড তৈরি
+
+```bash
+yarn build
+```
+
+### ৪. বিল্ড প্রিভিউ
+
+```bash
+yarn preview
+```
+
+---
+
+## 👨‍💻 ক্রেডিট ও কৃতজ্ঞতা
+
+- **উন্নয়ন ও ডিজাইন:** [Borhan Uddin](https://github.com/wapborhan)
+- **উদ্যোগ:** [SR Dream Lab](https://www.srdreamlab.com)
